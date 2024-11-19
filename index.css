@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'RobotoR';
+    /* Choose a name for the font */
+    src: url('../newsletter-sign-up-with-success-message/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoB';
+    src: url('../newsletter-sign-up-with-success-message/assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* ### Primary */
+
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* ### Neutral */
+
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --pinker: rgba(255, 84, 116, 255);
+    --error: rgba(210, 126, 124, 255);
+}
+
+body {
+    background-color: var(--Charcoal-Grey);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-card {
+    background-color: var(--White);
+    width: 49%;
+    border-radius: 30px;
+    display: flex;
+    padding: 20px 0px 20px 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 35px 50px 40px;
+}
+
+.update {
+    font-family: "RobotoB";
+    color: var(--Dark-Slate-Grey);
+    font-size: 2.65rem;
+    margin-top: 3px;
+}
+
+.join {
+    margin-top: 14px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: var(--Charcoal-Grey);
+    font-family: "RobotoR";
+    line-height: 18px;
+
+}
+
+.featured-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 30px;
+
+}
+
+.featured-item {
+    display: flex;
+    gap: 10px;
+    font-family: "RobotoR";
+    align-items: center;
+
+}
+
+.featured-p {
+    font-size: 11.8px;
+    color: var(--Charcoal-Grey);
+}
+
+.labeler {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.error-msg {
+    font-size: 9px;
+    font-family: "RobotoB";
+    color: var(--error);
+    display: none;
+}
+
+.email-label {
+    font-size: 9px;
+    color: var(--Dark-Slate-Grey);
+    font-family: "RobotoB";
+}
+
+#email {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--Grey);
+    margin-bottom: 20px;
+    outline: none;
+    /*  takes away the purple border from the input field */
+    color: black;
+    cursor: pointer;
+}
+
+#email:focus {
+    border: 1px solid black;
+}
+
+#email.invalid::placeholder {
+    color: var(--error);
+}
+
+.error {
+    background-color: #ffdddd;
+}
+
+
+.subscribe {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-family: "RobotoB";
+    padding: 15px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.subscribe:hover {
+    background: linear-gradient(90deg, var(--pinker), var(--Tomato));
+    box-shadow: 0 12px 40px hsl(4, 100%, 67%, 0.8);
+}
+
+.imager {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.confirmation {
+    background-color: var(--White);
+    width: 25%;
+    border-radius: 25px;
+    flex-direction: column;
+    padding: 45px;
+    box-sizing: border-box;
+    display: none;
+
+}
+
+.successor {
+    position: relative;
+    top: -20px;
+}
+
+.thanks {
+    color: var(--Dark-Slate-Grey);
+    font-family: "RobotoB";
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    line-height: 2.7rem;
+}
+
+.p-confirm {
+    color: var(--Dark-Slate-Grey);
+    font-family: "RobotoR";
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.mailer {
+    color: var(--Dark-Slate-Grey);
+    font-family: "RobotoB";
+}
+
+.dismiss {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border-radius: 5px;
+    font-family: "RobotoB";
+    padding: 13px 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 11px;
+}
+
+@media screen and (max-width:600px) {
+
+    body {
+        background-color: var(--White);
+    }
+
+    .main-card {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    .imager {
+        width: 100%;
+    }
+
+    .confirmation {
+        flex-direction: column;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .dismiss {
+        position: relative;
+        top: 180px;
+        font-size: 14px;
+    }
+
+    .thanks {
+        font-size: 2.3rem;
+    }
+
+    .update {
+        font-size: 2rem;
+    }
+
+    .featured-p {
+        font-size: .8rem;
+    }
+
+    .join {
+        font-size: .8rem;
+    }
+
+
+    .imager {
+        width: 100%;
+        order: -1;
+    }
+
+    .info {
+        padding: 20px 25px 40px 25px;
+    }
+}
