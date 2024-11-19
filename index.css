@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'RobotoR';
     /* Choose a name for the font */
-    src: url('../newsletter-sign-up-with-success-message/assets/fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'RobotoB';
-    src: url('../newsletter-sign-up-with-success-message/assets/fonts/Roboto-Bold.ttf') format('truetype');
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
 * {
